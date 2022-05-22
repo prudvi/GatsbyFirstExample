@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React from "react";
 import Layout from '../components/layout';
-import { docLinkStyle, listStyles } from './styles';
+import { docLinkStyle, listStyles } from '../css/styles';
 const Users = ({ data }: any) => (
 
     <Layout pageTitle="Users Page">
