@@ -2,11 +2,11 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 
-const BlogPage = ({ data }) => {
+const BlogPage = ({ data }: any) => {
   return (
     <Layout pageTitle="My Blog Posts">
       {
-        data.allMdx.nodes.map(node => (
+        data.allMdx.nodes.map((node: any) => (
           <article key={node.id}>
             <h2>
               <Link to={`/blog/${node.slug}`}>
