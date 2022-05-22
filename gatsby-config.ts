@@ -15,8 +15,18 @@ const config: GatsbyConfig = {
         path: `${__dirname}/blog`,
       }
     },
-    { resolve: "gatsby-plugin-mdx"}
-
+    { resolve: "gatsby-plugin-mdx"},
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "external",
+        // This is the field under which it's accessible
+        fieldName: "external",
+        // URL to query from
+        url: "http://localhost:4001/graphql",
+      },
+    }
   ]
 };
 
