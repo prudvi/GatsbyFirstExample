@@ -22,13 +22,6 @@
         "stopOnEntry": false,
         "runtimeArgs": ["--nolazy"],
         "sourceMaps": false
-      },
-      {
-        "type": "chrome",
-        "request": "launch",
-        "name": "Launch Chrome",
-        "url": "http://localhost:8000",
-        "webRoot": "${workspaceFolder}"
       }
     ]
   }

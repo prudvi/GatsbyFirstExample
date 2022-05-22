@@ -15,7 +15,8 @@ const config: GatsbyConfig = {
         path: `${__dirname}/blog`,
       }
     },
-    { resolve: "gatsby-plugin-mdx"}
+    { resolve: "gatsby-plugin-mdx"},
+    {resolve:  "gatsby-transformer-sharp"}
 
   ]
 };
