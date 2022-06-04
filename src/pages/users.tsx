@@ -1,10 +1,10 @@
 import { graphql } from 'gatsby';
 import React from "react";
-import Layout from '../components/layout';
-import { docLinkStyle, listStyles } from './styles';
+import CustomLayout from '../components/layout';
+import { docLinkStyle, listStyles } from '../css/styles';
 const Users = ({ data }: any) => (
 
-    <Layout pageTitle="Users Page">
+    <CustomLayout pageTitle="Users Page">
         <h4>users count: {data.external.users.length}</h4>
         <ul style={listStyles}>
             {data.external.users.map((user: any) => (
@@ -20,7 +20,7 @@ const Users = ({ data }: any) => (
                 </li>
             ))}
         </ul>
-    </Layout>
+    </CustomLayout>
 
 )
 

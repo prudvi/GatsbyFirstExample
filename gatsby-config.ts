@@ -1,5 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
-
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `My Gatsby Site`,
@@ -29,5 +31,6 @@ const config: GatsbyConfig = {
     }
   ]
 };
+
 
 export default config;

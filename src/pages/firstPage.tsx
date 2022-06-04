@@ -1,11 +1,11 @@
 import * as React from 'react'
-import Layout from '../components/layout';
+import CustomLayout from '../components/layout';
 
 const FirstPage = () => {
   return (
-    <Layout pageTitle="First Page">
+    <CustomLayout pageTitle="First Page">
       <p>I'm making this by following the Gatsby Tutorial.</p>
-    </Layout>
+    </CustomLayout>
   )
 }
 

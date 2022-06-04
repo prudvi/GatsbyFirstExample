@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
-import Layout from '../../components/layout'
+import CustomLayout from '../../components/layout'
 
 const BlogPage = ({ data }: any) => {
   return (
-    <Layout pageTitle="My Blog Posts">
+    <CustomLayout pageTitle="My Blog Posts">
       {
         data.allMdx.nodes.map((node: any) => (
           <article key={node.id}>
@@ -17,7 +17,7 @@ const BlogPage = ({ data }: any) => {
           </article>
         ))
       }
-    </Layout>
+    </CustomLayout>
   )
 }
 

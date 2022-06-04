@@ -1,3 +1,4 @@
+import '@progress/kendo-theme-default/dist/all.css';
 export const pageStyles = {
     color: "#232129",
     padding: 96,
