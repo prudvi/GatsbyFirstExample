@@ -1,6 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from "react";
-import Layout from '../components/layout';
+import CustomLayout from '../components/layout';
 
 // styles
 import { badgeStyle, codeStyles, descriptionStyle, docLink, docLinkStyle, linkStyle, listItemStyles, listStyles, pageStyles, paragraphStyles } from '../css/styles';
@@ -63,7 +63,7 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
-      <Layout pageTitle="Home Page">
+      <CustomLayout pageTitle="Home Page">
         <StaticImage
           alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
           src="../images/dog.webp"
@@ -101,7 +101,7 @@ const IndexPage = () => {
             </li>
           ))}
         </ul>
-      </Layout>
+      </CustomLayout>
     </main>
   )
 }

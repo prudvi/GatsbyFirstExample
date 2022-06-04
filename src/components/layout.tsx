@@ -9,7 +9,7 @@ import {
   siteTitle,
 } from './layout.module.css'
 
-const Layout = ({ pageTitle, children }: any) => {
+const CustomLayout = ({ pageTitle, children }: any) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -42,6 +42,11 @@ const Layout = ({ pageTitle, children }: any) => {
             </Link>
           </li>
           <li className={navLinkItem}>
+            <Link to="/stocks" className={navLinkText}>
+              Stocks
+            </Link>
+          </li>
+          <li className={navLinkItem}>
             <Link to="/about" className={navLinkText}>
               About
             </Link>
@@ -61,4 +66,4 @@ const Layout = ({ pageTitle, children }: any) => {
   )
 }
 
-export default Layout
+export default CustomLayout
