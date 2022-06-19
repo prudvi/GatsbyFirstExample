@@ -1,0 +1,13 @@
+.siteHeader {
+    display: flex;
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 2px 0px;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+    .siteTitle {
+        font-size: var(--header1FontSize);
+        color: gray;
+        font-weight: 700;
+        margin: 2rem 0;
+      }
+}
+

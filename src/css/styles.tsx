@@ -1,7 +1,7 @@
 import '@progress/kendo-theme-default/dist/all.css';
 export const pageStyles = {
     color: "#232129",
-    padding: 96,
+    //padding: 96,
     fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 

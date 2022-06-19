@@ -1,13 +1,8 @@
-import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import {
-  container,
-  heading,
-  navLinks,
-  navLinkItem,
-  navLinkText,
-  siteTitle,
-} from './layout.module.css'
+import { graphql, useStaticQuery } from 'gatsby';
+import * as React from 'react';
+import FooterComponent from './common/footerComponent';
+import HeaderComponent from './common/headerComponent';
+import './Menu.scss';
 
 const CustomLayout = ({ pageTitle, children }: any) => {
   const data = useStaticQuery(graphql`
@@ -21,47 +16,14 @@ const CustomLayout = ({ pageTitle, children }: any) => {
   `)
 
   return (
-    <div key={container+'-'+pageTitle} className={container}>
+    <div key={'container' + '-' + pageTitle} className={"container"}>
       <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/firstPage" className={navLinkText}>
-              First Page
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>
-              Blog
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/stocks" className={navLinkText}>
-              Stocks
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/users" className={navLinkText}>
-              Users
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <HeaderComponent title={data.site.siteMetadata.title} />
       <main>
-        <h1 className={heading}>{pageTitle}</h1>
+        <h1 className={"heading"}>{pageTitle}</h1>
         {children}
       </main>
+      <FooterComponent></FooterComponent>
     </div>
   )
 }

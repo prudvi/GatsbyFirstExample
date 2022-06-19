@@ -1,0 +1,29 @@
+.filterList {
+    max-height: 370px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.filteredItem {
+    border-radius: 10px;
+    border: 2px solid #73AD21;
+    width: 230px;
+    height: 23px;
+    list-style-type: none;
+    text-align: center;
+    position: relative;
+    left: -25px;
+    font-size: var(--textFontSize);
+    margin: 2px;
+    cursor: pointer;
+}
+
+.activeFilter {
+    background-color: rgb(208 208 89 / 42%);
+    color: #0a06e4e0;
+}
+
+.filteredItem > p {
+    position: relative;
+    bottom: 12px;
+}
