@@ -15,7 +15,6 @@ const MenuNavContainer = (props: any) => {
               {rte.title}
             </Link>
           </li>
-
         ))
         }
       </ul>

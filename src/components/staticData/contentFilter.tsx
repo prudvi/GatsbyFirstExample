@@ -22,11 +22,11 @@ const companyUpdateFilters = ["All", "Board Meeting Intimation", "Earnings Call 
     "Allotment of ESOP / ESPS", "Investor Meet - Intimation", "Credit Rating", "Corporate Insolvency Resolution",
     "Exercise of stock options",
     "Change of Company Name", "Meeting Updates", "Scheme of Arrangement", "Appointment Of", "Resignation of",
-    "Annual Secretarial Compliance", "Announcement", "Award", "LOA", "Postal Ballot", "Change in Directorate", "Subsidiary",
+    "Annual Secretarial Compliance", "Award", "LOA", "Postal Ballot", "Change in Directorate", "Subsidiary",
     "Updates on Open Offer", "Related Party Transactions", "Preferential Issue", "Others"];
 
-const boardMeetingFilters = ["All", "Intimation", "Outcome", "Others"];
-const agmFilters = ["All", "Annual General Meeting", "Outcome", 
+const boardMeetingFilters = ["All", "Board Meeting Intimation", "Board Meeting Outcome", "Others"];
+const agmFilters = ["All", "Annual General Meeting", "Postal Ballot-Outcome", 
 "Voting Results", "Shareholder Meeting", "Scrutinizers Report", "Postal Ballot",
 "Extra Ordinary General Meeting", "Remote E-voting", "Others"];
 

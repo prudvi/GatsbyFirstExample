@@ -27,3 +27,19 @@
     position: relative;
     bottom: 12px;
 }
+
+.gridCss  {
+    display: grid;
+    grid-template-columns: 22% 77%;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+};
+
+.k-tabstrip-items-wrapper {
+    .k-active {
+        background-color: #9e9e9e !important;
+        .k-link {
+          color: white;
+        }
+    }
+  }

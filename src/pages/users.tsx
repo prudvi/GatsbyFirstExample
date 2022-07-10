@@ -25,7 +25,6 @@ const Users = ({ data }: any) => (
 )
 
 export default Users
-
 export const query = graphql`
   query {
     external {

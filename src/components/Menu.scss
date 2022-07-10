@@ -23,3 +23,12 @@
   margin: 2rem;
   align-items: flex-end;
 }
+
+
+.hrfLink {
+  margin: 12px;
+  font-size: var(--textFontSize);
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+}

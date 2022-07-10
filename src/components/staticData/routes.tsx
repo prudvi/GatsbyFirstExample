@@ -8,10 +8,6 @@ export const routeList: any = [
         link: '/firstPage'
     },
     {
-        title: 'Stock List',
-        link: '/stocks'
-    },
-    {
         title: 'Blog',
         link: '/blog'
     },
@@ -22,5 +18,13 @@ export const routeList: any = [
     {
         title: 'Users',
         link: '/users'
+    },
+    {
+        title: 'Companies',
+        link: '/companies'
+    },
+    {
+        title: 'Securities ',
+        link: '/security'
     }
 ];
