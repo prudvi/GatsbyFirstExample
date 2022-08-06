@@ -4,12 +4,13 @@ import { useState } from 'react';
 import CustomLayout from '../components/layout';
 import TwoColumnLayout from "./TwoColumLayout";
 
-const CompanyByFilter = ({ data }: any) => {
+const CompanyByFilter = ( props: any) => {
+    const { data, location } = props;
     const [securityData, setSecurity] = useState(data.external.dailyEquityData.data);
     const [metaData, setMetaData] = useState(data.external.dailyEquityData.meta);
     return (
         <CustomLayout pageTitle="Stock Securities">
-            <TwoColumnLayout data={securityData} metaData={metaData}/>
+            <TwoColumnLayout data={securityData} metaData={metaData} value={location.pathname} />
         </CustomLayout>
     );
 }

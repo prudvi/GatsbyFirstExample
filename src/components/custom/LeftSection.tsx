@@ -15,7 +15,7 @@ const LeftSection = (props: LeftSectionProps) => {
                         onClick={subFilterClicked}
                         className={`filteredItem 
                             ${selectedSubCategory === item.filterName ? 'activeFilter' : ''}`}>
-                        {item.filterName} ( {item.values.length} )</li>
+                        {item.filterName} [ {item.values.length} ]</li>
                 ))}
             </ul>
         </div>

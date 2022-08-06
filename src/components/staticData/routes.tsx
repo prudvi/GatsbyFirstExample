@@ -1,3 +1,5 @@
+import { createDateFormat } from './../../utilityPack/dateUtility';
+let value  = createDateFormat(0).value;
 export const routeList: any = [
     {
         title: 'Home',
@@ -25,6 +27,6 @@ export const routeList: any = [
     },
     {
         title: 'Securities ',
-        link: '/security'
+        link: `/security/${value}`
     }
 ];

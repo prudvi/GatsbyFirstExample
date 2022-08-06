@@ -15,6 +15,12 @@ interface RightSectionProps {
 }
 
 const RightSection = (props: RightSectionProps) => {
+
+    // React.useEffect(() => {
+    //     let isElement = document.getElementById("scrollIntoView");
+    //     isElement ? isElement.scrollIntoView() : null;
+    // }, []);
+
     const { categoryFilterClicked, addToWatchList,
         data, selected, subFilterList, selectedCategory } = props;
 
@@ -26,7 +32,10 @@ const RightSection = (props: RightSectionProps) => {
     );
 
     return (
-        <TabStrip selected={selected} onSelect={categoryFilterClicked}>
+        <>
+        
+        <TabStrip selected={selected} onSelect={categoryFilterClicked} id="scrollIntoView">
+            
             {data.map((cat: any, index: any) => (
                 <TabStripTab title={cat.filterName + ' (' + cat.values[0].values.length + ') '}
                     key={`CATEGORY${index}`}>
@@ -37,7 +46,7 @@ const RightSection = (props: RightSectionProps) => {
                     />
                 </TabStripTab>
             ))}
-        </TabStrip>
+        </TabStrip></>
     );
 }
 

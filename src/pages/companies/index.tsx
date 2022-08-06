@@ -3,7 +3,6 @@ import { useState } from 'react';
 import CustomLayout from '../../components/layout';
 import * as React from 'react';
 import TableLayout from '../../templates/Table/GridTable';
-import './company.scss';
 
 const Company = ({ data }: any) => {
     const [securityData, setSecurity] = useState(data.external.companies);

@@ -35,17 +35,31 @@ let MonthlyDays = [
     { key: 'Dec', value: 31, id: 11 }
 ];
 
+
+export  const createDateFormat = (index: any) => {
+    const date = new Date();
+    date.setDate(date.getDate() - index);
+    let todayNumber = date.getDate() < 10 ? '0' + date.getDate(): date.getDate();
+    const currentMonth = date.getMonth() + 1;
+    let todayMonth: any = currentMonth  < 10 ? '0' + currentMonth: currentMonth;
+    let todayYear = date.getFullYear();
+    return {
+        label: todayNumber + ', ' + MonthlyDays[parseInt(todayMonth)-1].key,
+        value: todayYear + '-' + todayMonth + '-' + todayNumber
+    };
+}
 export const pastDays = (arrayCount: any) => {
     return [...Array(arrayCount).keys()].map(index => {
-        const date = new Date();
-        date.setDate(date.getDate() - index);
-        let todayNumber = date.getDate() < 10 ? '0' + date.getDate(): date.getDate();
-        const currentMonth = date.getMonth() + 1;
-        let todayMonth: any = currentMonth  < 10 ? '0' + currentMonth: currentMonth;
-        let todayYear = date.getFullYear();
-        return {
-            label: todayNumber + ', ' + MonthlyDays[parseInt(todayMonth)-1].key,
-            value: todayYear + '-' + todayMonth + '-' + todayNumber
-        };
+        return createDateFormat(index);
+        // const date = new Date();
+        // date.setDate(date.getDate() - index);
+        // let todayNumber = date.getDate() < 10 ? '0' + date.getDate(): date.getDate();
+        // const currentMonth = date.getMonth() + 1;
+        // let todayMonth: any = currentMonth  < 10 ? '0' + currentMonth: currentMonth;
+        // let todayYear = date.getFullYear();
+        // return {
+        //     label: todayNumber + ', ' + MonthlyDays[parseInt(todayMonth)-1].key,
+        //     value: todayYear + '-' + todayMonth + '-' + todayNumber
+        // };
     });
 }

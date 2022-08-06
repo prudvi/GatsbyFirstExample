@@ -2,7 +2,7 @@ import { Card, CardBody, CardSubtitle, CardTitle } from '@progress/kendo-react-l
 import { ListViewItemProps } from '@progress/kendo-react-listview';
 import * as React from 'react';
 import { parseDate } from './../../utilityPack/dateUtility';
-
+import { redirectURL } from './../staticData/CommonConstants';
 interface ItemRenderProps extends ListViewItemProps {
     addToWatchList: (item: any) => void;
     subFilterCategory: string;
@@ -11,7 +11,7 @@ interface ItemRenderProps extends ListViewItemProps {
 const ItemRender = (props: ItemRenderProps) => {
     const [item, setItem] = React.useState(props.dataItem);
     const subCategory = props.subFilterCategory;
-    return  (
+    return (
         <div key={props.dataItem.CATEGORYNAME}>
             <Card orientation='horizontal' style={{ borderWidth: '0px 0px 1px' }}>
 
@@ -20,26 +20,27 @@ const ItemRender = (props: ItemRenderProps) => {
                         <div style={{ width: '70%', padding: '5 0' }}>
                             <CardTitle style={{ fontSize: 16 }}>
                                 {item.NEWSSUB}
-                                <a className="hrfLink" href={`https://www.bseindia.com/xml-data/corpfiling/AttachLive/` + item.ATTACHMENTNAME}
+                                {item.ATTACHMENTNAME ? <a className="hrfLink"
+                                    href={redirectURL + item.ATTACHMENTNAME}
                                     rel="noreferrer" target={"_blank"}>
                                     Details
-                                </a>
+                                </a> : null}
                             </CardTitle>
                             <CardSubtitle>
                                 <div dangerouslySetInnerHTML={{ __html: item.HEADLINE }}></div>
                                 {/* {item.HEADLINE} */}
                             </CardSubtitle>
                         </div>
-                        <div style={{ width: '25%', padding: '5 0' , margin: '2px' }}>
+                        <div style={{ width: '25%', padding: '5 0', margin: '2px' }}>
 
                             <div>{subCategory} &nbsp;</div>
                             <div style={{ marginTop: '2rem' }}>{parseDate(item.DT_TM)}</div>
-                          
+
                         </div>
                         <div style={{ width: '4%', padding: '5 0' }}>
                             {/* <button className='k-button k-button-md k-rounded-md k-button-solid k-button-solid-primary' style={{ marginRight: 5 }} onClick={enterEdit}>Edit</button> */}
                             <button className='k-button k-button-md k-rounded-md k-button-solid k-button-solid-base'
-                               >Watch</button>
+                            >Watch</button>
                         </div>
                     </div>
                 </CardBody>

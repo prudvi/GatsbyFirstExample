@@ -12,11 +12,6 @@ const IndexPage = () => {
     <main style={pageStyles}>
       <title>Home Page</title>
       <CustomLayout pageTitle="Home Page">
-        <StaticImage
-          alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
-          src="../images/dog.webp"
-        />
-
         <Carousel axis="vertical">
           <div>
             <StaticImage alt="Test Image"
