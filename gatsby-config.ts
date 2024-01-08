@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+import { backEndUrl } from "./src/utilityPack/commonConstants";
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -27,7 +28,7 @@ const config: GatsbyConfig = {
         // This is the field under which it's accessible
         fieldName: "external",
         // URL to query from
-        url: "http://localhost:4001/graphql",
+        url: backEndUrl
       },
     }
   ]

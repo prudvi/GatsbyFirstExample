@@ -11,42 +11,32 @@ interface RightSectionProps {
     selected: any;
     subFilterList: any;
     selectedCategory: string;
-    addToWatchList: (item: any) => void;
 }
 
 const RightSection = (props: RightSectionProps) => {
-
-    // React.useEffect(() => {
-    //     let isElement = document.getElementById("scrollIntoView");
-    //     isElement ? isElement.scrollIntoView() : null;
-    // }, []);
-
-    const { categoryFilterClicked, addToWatchList,
+    const { categoryFilterClicked,
         data, selected, subFilterList, selectedCategory } = props;
 
     const CustomList = (props: ListViewItemProps) => (
         <ItemRender
             {...props} subFilterCategory={selectedCategory}
-            addToWatchList={addToWatchList}
         />
     );
 
     return (
         <>
-        
-        <TabStrip selected={selected} onSelect={categoryFilterClicked} id="scrollIntoView">
-            
-            {data.map((cat: any, index: any) => (
-                <TabStripTab title={cat.filterName + ' (' + cat.values[0].values.length + ') '}
-                    key={`CATEGORY${index}`}>
-                    <ListView
-                        data={subFilterList}
-                        item={CustomList}
-                        style={{ width: "100%", height: 330 }}
-                    />
-                </TabStripTab>
-            ))}
-        </TabStrip></>
+            <TabStrip selected={selected} onSelect={categoryFilterClicked} id="scrollIntoView">
+                {data.map((cat: any, index: any) => (
+                    <TabStripTab title={cat.filterName + ' (' + cat.values[0].values.length + ') '}
+                        key={`CATEGORY${index}`}>
+                        <ListView
+                            data={subFilterList}
+                            item={CustomList}
+                            style={{ width: "100%", maxHeight: 500 }}
+                        />
+                    </TabStripTab>
+                ))}
+            </TabStrip></>
     );
 }
 

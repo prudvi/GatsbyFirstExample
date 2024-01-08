@@ -36,7 +36,7 @@ exports.createPages = async function ({ actions, graphql }) {
         actions.createPage({
             path: `/company/${value}`,
             component: path.resolve(`./src/templates/CompanyByFilter.tsx`),
-            context: { companyName: value }
+            context: { companyName: item.companyId }
         })
     })
 }

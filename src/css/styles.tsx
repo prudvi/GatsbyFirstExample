@@ -1,4 +1,5 @@
 import '@progress/kendo-theme-default/dist/all.css';
+import "@progress/kendo-font-icons/dist/index.css";
 export const pageStyles = {
     color: "#232129",
     //padding: 96,

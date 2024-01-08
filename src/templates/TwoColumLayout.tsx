@@ -45,7 +45,7 @@ const TwoColumnLayout = (props: any) => {
         };
 
         const addToWatchList = (item: any) => {
-
+            console.log(item)
         };
 
         const subFilterClicked = (event: any) => {
@@ -67,7 +67,7 @@ const TwoColumnLayout = (props: any) => {
                    
                     <RightSection data={data} selected={selected}
                         selectedCategory={selectedCategory} subFilterList={subFilterList}
-                        categoryFilterClicked={categoryFilterClicked} addToWatchList={addToWatchList} />
+                        categoryFilterClicked={categoryFilterClicked}/>
                 </div>
             </>
         )

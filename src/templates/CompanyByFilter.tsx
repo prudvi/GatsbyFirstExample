@@ -9,7 +9,7 @@ const CompanyByFilter = ( props: any) => {
     const [securityData, setSecurity] = useState(data.external.dailyEquityData.data);
     const [metaData, setMetaData] = useState(data.external.dailyEquityData.meta);
     return (
-        <CustomLayout pageTitle="Stock Securities">
+        <CustomLayout pageTitle="Companies List">
             <TwoColumnLayout data={securityData} metaData={metaData} value={location.pathname} />
         </CustomLayout>
     );
@@ -19,7 +19,7 @@ export default CompanyByFilter
 export const query = graphql`
    query ($companyName: String)  {
     external {
-        dailyEquityData(input: {value : $companyName, property: "SLONGNAME", limit: 100}) {
+        dailyEquityData(input: {value : $companyName, property: "SCRIP_CD", limit: 2000}) {
             data {
                 filterName
                 values {

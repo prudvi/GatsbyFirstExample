@@ -3,8 +3,8 @@ import { ListViewItemProps } from '@progress/kendo-react-listview';
 import * as React from 'react';
 import { parseDate } from './../../utilityPack/dateUtility';
 import { redirectURL } from './../staticData/CommonConstants';
+import { Color } from '@progress/kendo-drawing';
 interface ItemRenderProps extends ListViewItemProps {
-    addToWatchList: (item: any) => void;
     subFilterCategory: string;
 }
 
@@ -38,9 +38,7 @@ const ItemRender = (props: ItemRenderProps) => {
 
                         </div>
                         <div style={{ width: '4%', padding: '5 0' }}>
-                            {/* <button className='k-button k-button-md k-rounded-md k-button-solid k-button-solid-primary' style={{ marginRight: 5 }} onClick={enterEdit}>Edit</button> */}
-                            <button className='k-button k-button-md k-rounded-md k-button-solid k-button-solid-base'
-                            >Watch</button>
+                            <span style={{color:"green"}}> OWNED</span>
                         </div>
                     </div>
                 </CardBody>

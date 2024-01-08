@@ -6,16 +6,16 @@ export const routeList: any = [
         link: '/'
     },
     {
-        title: 'First Page',
-        link: '/firstPage'
+        title: 'Portfolio List',
+        link: '/portfolio'
     },
     {
         title: 'Blog',
         link: '/blog'
     },
     {
-        title: 'About',
-        link: '/about'
+        title: 'My Watch List',
+        link: '/watchList'
     },
     {
         title: 'Users',

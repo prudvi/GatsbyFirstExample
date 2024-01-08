@@ -2,7 +2,18 @@
 @import './security.scss';
 @import './company.scss';
 
-body {
-    height: 100vh;
+html, body {
+    margin: 0;
+  height: 100%;
     font-family: var(--fontFamilyType);
 }
+body {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+@media (min-width: 800px)  and (max-width: 1600px){
+    .filterList {
+      max-height: 500px;
+    }
+  }
